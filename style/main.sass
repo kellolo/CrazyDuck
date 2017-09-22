@@ -1,0 +1,222 @@
+@keyframes rotate-left
+	from
+		transform: scale(0.25) rotate(0deg)
+	to
+		transform: scale(0.25) rotate(180deg)
+
+@keyframes rotate-center
+	from
+		transform: scale(0.4) rotate(0deg)
+	to
+		transform: scale(0.4) rotate(180deg)
+
+@keyframes rotate-right
+	from
+		transform: scale(0.7) rotate(0deg)
+	to
+		transform: scale(0.7) rotate(180deg)
+
+
+/*SVG*/
+
+body
+	overflow-x: hidden
+
+div.wrapper, div.header, div.svgs
+	width: 100vw
+	padding: 0
+	margin: 0
+
+.back-grn
+	background: linear-gradient(to bottom, #ffb380, #ffffea)
+	width: 100vw
+	height: 99vh
+	background-attachment: fixed
+	overflow-y: hidden
+
+.svg-inline
+	display: inline-block
+	position: absolute
+	transition: 0.8s top, 0.8s bottom
+	transition-timing-function: ease-in-out
+
+.ground-left
+	bottom: 0px
+	left: -3px
+
+.ground-center
+	bottom: 0px
+	left: 30vw
+
+.ground-right
+	bottom: 0px
+	right: 0vw
+
+.logo-svg
+	bottom: 50%
+	left: 25%
+
+.cloud-1
+	top: 200px
+	left: 30vw
+	transform: scale(4,3)
+
+.cloud-2
+	top: 350px
+	left: 50%
+	transform: scale(4,2)
+
+.cloud-3
+	top: 500px
+	left: 70%
+	transform: scale(2.5,1.5)
+
+.wheel-center 
+	transform: scale(0.4)
+	position: absolute
+	top: -52%
+	left: 29.75%
+	animation: rotate-center 2s linear infinite
+
+.wheel-right 
+	transform: scale(0.7)
+	position: absolute
+	top: -43%
+	left: 50.25%
+	animation: rotate-right 2.6s linear infinite
+
+.wheel-left 
+	transform: scale(0.25)
+	position: absolute
+	top: -41%
+	left: -14%
+	animation: rotate-left 1s linear infinite
+
+/*BLOCKS*/
+
+.content
+	position: relative
+	height: 10000px
+	background: black
+
+
+	/*PARALLAX*/
+
+
+	/*MENU*/
+
+.menu
+	transition: 1s transform 
+	position: fixed
+	bottom: -280px	
+	left: 5%
+	background: #abc837
+	width: 350px
+	height: 280px
+	color: white
+	border-radius: 0 10px 0 0
+	z-index: 10000
+	nav
+		position: absolute
+		top: -50px
+		height: 305px
+		width: 350px
+		.cn-button
+			width: 100px
+			height: 50px
+			border-radius: 50% 50% 0 0 / 100% 100% 0 0
+			text-align: center
+			background: #abc837
+			i
+				transition: 1s transform 
+				margin-top: 10%
+				font-size: 2em
+		.cn-wrap
+			width: 350px
+			position: absolute
+			top: 50px
+			border-radius: 0 10px 0 0
+			overflow: hidden
+			ul
+				padding: 0
+				margin: 0
+				width: 350px
+
+				li
+					display: block
+					transition: 0.3s background
+					width: 350px
+					height: 50px
+					list-style: none
+					padding-left: 20px
+					line-height: 50px
+					margin: 0
+					font-family: sans-serif
+					&:last-child
+						height: 70px
+					a, a:active, a:visited
+						text-decoration: none
+						color: white
+						font-size: 2em
+						padding: 10px 200px 10px 20px
+						i
+							display: inline
+						span
+							height: 50px
+							margin-left: 15px
+							text-transform: uppercase
+					&:hover
+						background: #bbd847
+						transition: 0.3s background
+
+	&:hover
+		transform: translateY(-270px)
+		transition: 1s transform 
+		.cn-button
+			i
+				transform: rotate(180deg)
+				transition: 1s transform 
+
+/*CONTENT*/
+div.content
+	padding-top: 150px
+/*FIRST SECTION*/
+.first-sect
+	height: 100vh
+	//border: 1px solid white
+	.hello
+		text-align: center
+		width: 40%
+		margin: 50px auto
+		p
+			color: white
+			font-size: 1.2em
+			margin-bottom: 50px
+	div
+		//border: 1px solid white
+div.ok-button
+	border-radius: 5px
+	border: 0
+	color: white
+	text-align: center
+	text-transform: uppercase
+	font-family: sans-serif
+	font-size: 1.2em
+	background: #abc837
+	display: block
+	width: 220px
+	height: 60px
+	line-height: 60px
+	transition: 0.3s background
+	transform-origin: 50% 50%
+	margin-left: auto
+	margin-right: auto
+	a, a:active, a:hover, a:visited
+		padding: 25px 30px
+		color: inherit
+		text-decoration: none
+	&:hover
+		background: #bbd847
+		transition: 0.3s background
+	&:focus
+		transform: scale(0.9)
