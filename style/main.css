@@ -167,18 +167,24 @@ div.wrapper, div.header, div.svgs {
 /*CONTENT */
 div.content {
   padding-top: 150px; }
+  div.content h1 {
+    color: white;
+    padding-bottom: 20px;
+    margin-bottom: 20px; }
 
 /*FIRST SECTION */
 .first-sect {
   height: 100vh; }
-  .first-sect .hello {
-    text-align: center;
-    width: 40%;
-    margin: 50px auto; }
-    .first-sect .hello p {
-      color: white;
-      font-size: 1.2em;
-      margin-bottom: 50px; }
+  .first-sect .row {
+    width: 100vw; }
+    .first-sect .row .hello {
+      text-align: center;
+      width: 40%;
+      margin: 50px auto; }
+      .first-sect .row .hello p {
+        color: white;
+        font-size: 1.2em;
+        margin-bottom: 50px; }
 
 div.ok-button {
   border-radius: 5px;
@@ -206,5 +212,68 @@ div.ok-button {
     transition: 0.3s background; }
   div.ok-button:focus {
     transform: scale(0.9); }
+
+.second_sect .units {
+  opacity: 0.3;
+  transition: 0.5s opacity; }
+  .second_sect .units .second-svg {
+    height: 200px; }
+    .second_sect .units .second-svg object {
+      display: block;
+      margin: 50px auto; }
+  .second_sect .units .second-text {
+    text-align: center; }
+    .second_sect .units .second-text h2 {
+      font-size: 1.2em;
+      transition: 0.5s color; }
+.second_sect .active {
+  opacity: 1;
+  transition: 0.5s opacity; }
+  .second_sect .active h2 {
+    color: #ff9955;
+    transition: 0.5s color; }
+  .second_sect .active:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin-top: 0;
+    margin-left: 37%;
+    border: 30px solid transparent;
+    border-bottom: 50px solid #ff9955;
+    display: block;
+    transition: 0.3s display; }
+.second_sect .tip {
+  background: #ff9955;
+  height: 200px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 70px; }
+  .second_sect .tip .text {
+    height: 180px;
+    display: none;
+    width: inherit; }
+  .second_sect .tip .active_tip {
+    display: block;
+    transition: 0.3s display;
+    padding-top: 20px; }
+    .second_sect .tip .active_tip p {
+      margin: 0px 20px;
+      text-align: justify; }
+    .second_sect .tip .active_tip .ok-button {
+      cursor: pointer;
+      width: 180px;
+      height: 40px;
+      background: white;
+      color: #ff9955;
+      font-size: 1.05em;
+      margin-top: 20px;
+      line-height: 40px;
+      border: 1px solid white;
+      transition: 0.5s background, 0.5s color; }
+      .second_sect .tip .active_tip .ok-button:hover {
+        background: transparent;
+        color: white;
+        transition: 0.5s all; }
 
 /*# sourceMappingURL=main.css.map */

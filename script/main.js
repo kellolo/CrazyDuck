@@ -22,7 +22,9 @@ $(window).bind('scroll',function(e){
 		}
 	}*/
 });
-
+$( document ).ready(function() {
+	tips();
+});
 
 function parallaxScroll(){
 	var scrolled = $(window).scrollTop();
@@ -33,6 +35,33 @@ function parallaxScroll(){
 	$('.g-mid').css('bottom',(0-(scrolled*0.3))+'px');
 	$('.g-back').css('bottom',(0-(scrolled*0.6))+'px');
 	//$('.brick').css('height',(50+(scrolled*0.05))+'px');
+}
+
+function tips(){
+	var checker = 0;
+	$('.units').hover(function() {
+		if($(this).hasClass('active')){
+			$(this).addClass('visib');
+		}
+		else{
+			$('.visib').removeClass('active visib');
+			$('.visib').removeClass('active visib');
+			$(this).addClass('active visib');
+
+			if($(this).hasClass('act_1')){
+				$('.active_tip').removeClass('active_tip');
+				$('.active_tip_1').addClass('active_tip');
+			}
+			else if($(this).hasClass('act_2')){
+				$('.active_tip').removeClass('active_tip');
+				$('.active_tip_2').addClass('active_tip');
+			}
+			else{
+				$('.active_tip').removeClass('active_tip');
+				$('.active_tip_3').addClass('active_tip');
+			}
+		}
+	});
 }
 /*$(function(){
 	$(window).ready(function() {

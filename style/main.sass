@@ -180,18 +180,25 @@ div.wrapper, div.header, div.svgs
 /*CONTENT*/
 div.content
 	padding-top: 150px
+	h1
+		color: white
+		padding-bottom: 20px
+		margin-bottom: 20px
 /*FIRST SECTION*/
 .first-sect
 	height: 100vh
 	//border: 1px solid white
-	.hello
-		text-align: center
-		width: 40%
-		margin: 50px auto
-		p
-			color: white
-			font-size: 1.2em
-			margin-bottom: 50px
+	.row
+		width: 100vw
+		.hello
+			text-align: center
+			width: 40%
+			margin: 50px auto
+
+			p
+				color: white
+				font-size: 1.2em
+				margin-bottom: 50px
 	div
 		//border: 1px solid white
 div.ok-button
@@ -220,3 +227,73 @@ div.ok-button
 		transition: 0.3s background
 	&:focus
 		transform: scale(0.9)
+
+//2nd section
+.second_sect
+	.units
+		opacity: 0.3
+		transition: 0.5s opacity
+		.second-svg
+			height: 200px
+			object
+				display: block
+				margin: 50px auto
+		.second-text
+			text-align: center
+			h2
+				font-size: 1.2em
+				transition: 0.5s color
+	.active
+		opacity: 1
+		transition: 0.5s opacity
+		h2
+			color: #ff9955
+			transition: 0.5s color
+		&:after
+			content: ' '
+			width: 0
+			height: 0
+			position: absolute
+			margin-top: 0
+			margin-left: 37%
+			border: 30px solid transparent
+			border-bottom: 50px solid #ff9955
+			display: block
+			transition: 0.3s display
+	.tip
+		background: #ff9955
+		height: 200px
+		border-radius: 10px
+		color: white
+		margin-top: 70px
+
+		.text
+			height: 180px
+			display: none
+			width: inherit
+		.active_tip
+			display: block
+			transition: 0.3s display
+			padding-top: 20px
+			p
+				margin: 0px 20px
+				text-align: justify
+			.ok-button
+				cursor: pointer
+				width: 180px
+				height: 40px
+				background: white
+				color: #ff9955
+				font-size: 1.05em
+				margin-top: 20px
+				line-height: 40px
+				border: 1px solid white
+				transition: 0.5s background, 0.5s color
+				&:hover
+					background: transparent
+					color: white
+					transition: 0.5s all
+
+
+
+
